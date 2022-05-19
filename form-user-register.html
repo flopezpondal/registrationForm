@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/form.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="/scripts/form.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="/scripts/form-user-register.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
+
 <body>
     <div class="container-fluid banner">
         <h1 class="display-3">DOM</h1>
@@ -22,29 +27,39 @@
             </section>
         </div>
         <div class="row">
-            <div class="col-6 p-4">
-                <form id="user-register">
+            <div class="col-12 col-md-6 p-5 p-md-3">
+                <form id="user-register" onsubmit="registrarUsuario(event)">
                     <div class="mb-3">
                         <label for="fullname" class="form-label">Nombre Completo</label>
-                        <input name="fullname" type="text" class="form-control" id="fullname" maxlength="60" placeholder="Nombre y apellido">
+                        <input name="fullname" type="text" class="form-control" id="fullname" maxlength="60"
+                        placeholder="Nombre y apellido" required>
                     </div>
                     <div class="mb-3">
                         <label for="username" class="form-label">Nombre de Usuario</label>
-                        <input name="username" type="text" class="form-control" id="username" maxlength="30" placeholder="Nombre de usuario">
+                        <input name="username" type="text" class="form-control" id="username" maxlength="30"
+                        placeholder="Nombre de usuario" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="avatar" class="form-label">Avatar</label>
+                        <input name="avatar" type="text" class="form-control" maxlength="130"
+                        placeholder="url" required>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Direccion de correo electronico</label>
-                        <input name="email" type="email" class="form-control" id="email" maxlength="45" placeholder="Direccion de correo electronico">
+                        <input name="email" type="email" class="form-control" id="email" maxlength="45"
+                        placeholder="Direccion de correo electronico" required>
                     </div>
                     <div class="mb-3">
                         <div class="row">
                             <div class="col-6">
                                 <label for="password" class="form-label">Contraseña</label>
-                                <input name="password" type="password" class="form-control" id="password" minlength="8" maxlength="16" placeholder="Contraseña">
+                                <input name="password" type="password" class="form-control" id="password" minlength="8"
+                                maxlength="16" placeholder="Contraseña" required>
                             </div>
                             <div class="col-6">
                                 <label for="password2" class="form-label">Confirmar contraseña</label>
-                                <input name="password2" type="password" class="form-control" id="password2" minlength="8" maxlength="16" placeholder="Confirmar contraseña">
+                                <input name="password2" type="password" class="form-control" id="password2"
+                                minlength="8" maxlength="16" placeholder="Confirmar contraseña" required>
                             </div>
                         </div>
                     </div>
@@ -52,11 +67,12 @@
                         <div class="row">
                             <div class="col-6">
                                 <label for="age" class="form-label">Edad</label>
-                                <input name="age" type="number" class="form-control" id="age" min="1" maxlength="120" placeholder="Edad">
+                                <input name="age" type="number" class="form-control" id="age" min="1" maxlength="120"
+                                placeholder="Edad" required>
                             </div>
                             <div class="col-6">
                                 <label for="gen" class="form-label">Genero</label>
-                                <select name="gen" class="form-select" id="gen">
+                                <select name="gen" class="form-select" id="gen" required>
                                     <option value="male">Hombre</option>
                                     <option value="female" selected>Mujer</option>
                                     <option value="other">Otro</option>
@@ -64,12 +80,17 @@
                             </div>
                         </div>
                     </div>
+                    <div class="text-danger" id="form-error"></div>
                     <div class="my-3">
                         <button class="btn btn-primary" type="submit">Registrar</button>
                     </div>
                 </form>
             </div>
+            <div class="col-12 col-md-6">
+                <ul id="users-list"></ul>
+            </div>
         </div>
     </main>
 </body>
+
 </html>
