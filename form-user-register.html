@@ -23,33 +23,33 @@
     <main>
         <div class="row">
             <section class="col-12">
-                <h4 class="">Registrarse</h2>
+                <h2 class="">Registrarse</h2>
             </section>
         </div>
-        <div class="row">
+        <div class="row">            
             <div class="col-12 col-md-6 p-5 p-md-3">
                 <form id="user-register" onsubmit="registrarUsuario(event)">
-                    <div class="mb-3">
+                    <div class="mb-1">
                         <label for="fullname" class="form-label">Nombre Completo</label>
                         <input name="fullname" type="text" class="form-control" id="fullname" maxlength="60"
                         placeholder="Nombre y apellido" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-1">
                         <label for="username" class="form-label">Nombre de Usuario</label>
                         <input name="username" type="text" class="form-control" id="username" maxlength="30"
                         placeholder="Nombre de usuario" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-1">
                         <label for="avatar" class="form-label">Avatar</label>
                         <input name="avatar" type="text" class="form-control" maxlength="130"
                         placeholder="url" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-1">
                         <label for="email" class="form-label">Direccion de correo electronico</label>
                         <input name="email" type="email" class="form-control" id="email" maxlength="45"
                         placeholder="Direccion de correo electronico" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-1">
                         <div class="row">
                             <div class="col-6">
                                 <label for="password" class="form-label">Contraseña</label>
@@ -87,7 +87,24 @@
                 </form>
             </div>
             <div class="col-12 col-md-6">
-                <ul id="users-list"></ul>
+                <section class="col-12">
+                    <h2 class="">Login</h2>
+                    <form onsubmit="" id="login">
+                        <div class="mb-1">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input name="email" type="email" class="form-control" id="loginEmail" maxlength="60"
+                            placeholder="email" required>
+                        </div>
+                        <div class="mb-1">
+                            <label for="loginPassword" class="form-label">Contraseña</label>
+                            <input name="password" type="password" class="form-control" id="loginPassword"
+                            minlength="8" maxlength="16" placeholder="Contraseña" required>
+                        </div>
+                        <button class="btn btn-success" type="submit">Ingresar</button>
+                        <div class="text-danger" id="formLoginError"></div>
+                    </form>
+                </section>
+                <ul id="users-list" class="py-5"></ul>
             </div>
         </div>
     </main>

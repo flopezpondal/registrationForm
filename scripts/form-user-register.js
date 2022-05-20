@@ -19,6 +19,14 @@ renderUser();
 function registrarUsuario(ev) {
     ev.preventDefault();
     const elemento = ev.target.elements;
+    const email = elemento.email.value;
+
+    const emailExist = users.some(usr => email === usr.email);
+
+    if (emailExist) {
+        showErrorMsg('El correo ya existe');
+        return;
+    }
 
     if(elemento.password.value != elemento.password2.value) return showErrorMsg('Las constraseñas no coinciden');
 
