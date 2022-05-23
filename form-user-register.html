@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <div class="welcome"></div>
     <div class="container-fluid banner">
         <h1 class="display-3">DOM</h1>
         <p class="lead">Document Object Model</p>
@@ -87,9 +88,10 @@
                 </form>
             </div>
             <div class="col-12 col-md-6">
-                <section class="col-12">
-                    <h2 class="">Login</h2>
-                    <form onsubmit="" id="login">
+                <sectionclass="col-12">
+                    <div id="loginSection">
+                        <h2 class="">Login</h2>
+                    <form id="login">
                         <div class="mb-1">
                             <label for="loginEmail" class="form-label">Email</label>
                             <input name="email" type="email" class="form-control" id="loginEmail" maxlength="60"
@@ -103,8 +105,12 @@
                         <button class="btn btn-success" type="submit">Ingresar</button>
                         <div class="text-danger" id="formLoginError"></div>
                     </form>
+                    </div>
+                    <div id="logout">
+                        <button class="btn btn-danger" onclick="logout()">Salir</button>
+                    </div>                    
                 </section>
-                <ul id="users-list" class="py-5"></ul>
+                <ul id="users-list" class="py-5 user-list"></ul>
             </div>
         </div>
     </main>

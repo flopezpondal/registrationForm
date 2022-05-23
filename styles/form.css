@@ -1,0 +1,67 @@
+body {
+    color: rgba(255, 255, 255, 0.60);
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.d-none {
+    display: none;
+}
+
+.banner {
+    color: white;
+    background-color: #111;
+    padding: 1rem 6rem !important;
+    background-image: url();
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.user-list li {
+    padding: 5rem 1rem;
+    border: 1px solid dodgerblue;
+    display: flex;
+    align-items: center;
+    color: .5rem;
+    column-gap: .5rem;
+    justify-content: space-between;
+}
+
+.user-list li .avatar {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+}
+
+.user-list li .data {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-list li .data .name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.user-list li .data .user {
+    color: dodgerblue;
+}
+
+.user-list li .data .email {
+    color: #aaa;
+    font-size: .75rem;
+}
+
+.user-list li .age {
+    font-weight: 500;
+    color: dodgerblue;
+}
+
+.user-list li .role {
+    font-weight: 500;
+    color: green;
+}
